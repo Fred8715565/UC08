@@ -1,0 +1,39 @@
+{
+    "name": "APP Laboratório Prático de Eventos JS",
+    "short_name": "L.P.E.J.S",
+    "description": "Simule a gravação de áudio com um clique e segure.",
+    "start_url": "/110/",
+    "scope": "/110/",
+    "id": "/110/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#121212",
+    "lang": "pt-BR",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/110/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/110/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/110/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/110/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
