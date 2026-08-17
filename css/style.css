@@ -1,0 +1,58 @@
+/* Container centralizado para a atividade */
+.container-gravador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos do botão fornecidos por você */
+#btn-gravador {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    user-select: none; /* Evita seleção de texto ao segurar */
+    transition: background-color 0.2s;
+}
+
+/* Efeito visual quando o botão for clicado/segurado */
+#btn-gravador:active {
+    background-color: #2980b9;
+}
+
+/* Estilos do status fornecidos por você */
+#status-gravacao {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Estilo do botão de ouvir o áudio gravado */
+#btn-ouvir {
+    padding: 12px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #2ecc71; /* Verde, tipo WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Mais arredondado, estilo "bolha de mensagem" */
+    user-select: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efeito hover (passar o mouse por cima) */
+#btn-ouvir:hover {
+    background-color: #27ae60;
+}
+
+/* Efeito ao clicar */
+#btn-ouvir:active {
+    background-color: #1e8449;
+    transform: scale(0.97); /* Leve "afundada" ao clicar */
+}
