@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Disney</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <svg class="castelo" viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- torre esquerda -->
+      <rect x="18" y="55" width="26" height="40" fill="#F4CD6B"/>
+      <polygon points="18,55 31,32 44,55" fill="#F4CD6B"/>
+      <rect x="29" y="24" width="4" height="10" fill="#F4CD6B"/>
+      <!-- torre central (mais alta) -->
+      <rect x="100" y="38" width="40" height="57" fill="#F4CD6B"/>
+      <polygon points="100,38 120,6 140,38" fill="#F4CD6B"/>
+      <rect x="118" y="0" width="4" height="8" fill="#F4CD6B"/>
+      <rect x="112" y="60" width="16" height="35" fill="#241B4E"/>
+      <!-- torre direita -->
+      <rect x="196" y="55" width="26" height="40" fill="#F4CD6B"/>
+      <polygon points="196,55 209,32 222,55" fill="#F4CD6B"/>
+      <rect x="207" y="24" width="4" height="10" fill="#F4CD6B"/>
+      <!-- corpo do castelo ligando as torres -->
+      <rect x="44" y="70" width="56" height="25" fill="#F4CD6B"/>
+      <rect x="140" y="70" width="56" height="25" fill="#F4CD6B"/>
+      <!-- janelas -->
+      <rect x="27" y="66" width="8" height="10" fill="#241B4E"/>
+      <rect x="199" y="66" width="8" height="10" fill="#241B4E"/>
+    </svg>
+    <h1 class="titulo">Meu Disney</h1>
+    <p id="contador">0 personagens carregados</p>
+  </header>
+
+  <main class="container" id="container"></main>
+
+  <footer class="rodape">
+    <button id="btnCarregar">Carregar mais</button>
+    <p id="paginaAtual">Página 1</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* ===== Fontes =====
+   Script dourado no título (clima "assinatura mágica")
+   Corpo em fonte arredondada e legível */
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap');
+
+/* ===== Paleta =====
+  Céu:            #0E1638 -> #241B4E (gradiente noite mágica)
+  Dourado:        #F4CD6B
+  Card:           #FFFCF4 (marfim)
+  Texto no céu:   #EDEBFA
+  Texto no card:  #262340
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #EDEBFA;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(244, 205, 107, 0.35) 1px, transparent 1.4px),
+    radial-gradient(circle at 45% 22%, rgba(244, 205, 107, 0.35) 1px, transparent 1.4px),
+    radial-gradient(circle at 75% 12%, rgba(244, 205, 107, 0.35) 1px, transparent 1.4px),
+    #14103A;
+  background-size: 260px 260px, 300px 300px, 220px 220px, 100% 100%;
+  min-height: 100vh;
+}
+
+/* ===== Cabeçalho ===== */
+.cabecalho {
+  text-align: center;
+  padding: 48px 16px 30px;
+}
+
+.castelo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 6px;
+}
+
+.titulo {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-weight: 400;
+  font-size: clamp(44px, 8vw, 76px);
+  color: #F4CD6B;
+  line-height: 1;
+}
+
+#contador {
+  margin-top: 10px;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B9B4E0;
+}
+
+/* ===== Grid responsivo ===== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 10px auto 44px;
+  padding: 0 20px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #FFFCF4;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(6, 8, 24, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card .foto-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #DCD6C2;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card p {
+  padding: 12px 10px;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  color: #262340;
+}
+
+/* ===== Rodapé / botão ===== */
+.rodape {
+  text-align: center;
+  padding: 0 16px 56px;
+}
+
+#btnCarregar {
+  background: #F4CD6B;
+  color: #221A44;
+  border: none;
+  padding: 13px 30px;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(244, 205, 107, 0.25);
+}
+
+#btnCarregar:hover {
+  background: #f7d886;
+}
+
+#btnCarregar:disabled {
+  background: #6b6790;
+  color: #cfcbe8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#paginaAtual {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9E99C4;
+}
