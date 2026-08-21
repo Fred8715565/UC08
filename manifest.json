@@ -12,25 +12,25 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "/missao_117/img/js.png",
+            "src": "/missao_117/img/disney.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "/missao_117/img/js.png",
+            "src": "/missao_117/img/disney.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "/missao_117/img/js.png",
+            "src": "/missao_117/img/disney.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "/missao_117/img/js.png",
+            "src": "/missao_117/img/disney.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
