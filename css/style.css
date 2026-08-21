@@ -1,8 +1,14 @@
 /* ===== Fontes =====
    Script dourado no título (clima "assinatura mágica")
    Corpo em fonte arredondada e legível */
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap');
 
+@font-face {
+    font-family: 'DisneyFont';
+    src: url('../fonts/waltographUI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* ===== Paleta =====
   Céu:            #0E1638 -> #241B4E (gradiente noite mágica)
   Dourado:        #F4CD6B
@@ -42,7 +48,7 @@ body {
 }
 
 .titulo {
-  font-family: 'Mrs Saint Delafield', cursive;
+  font-family: 'DisneyFont',Arial, sans-serif;
   font-weight: 400;
   font-size: clamp(44px, 8vw, 76px);
   color: #F4CD6B;
