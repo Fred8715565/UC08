@@ -1,0 +1,39 @@
+{
+    "name": "Audio Gravador",
+    "short_name": "Audio Gravador",
+    "description": "Simule a gravação de áudio com um clique e segure.",
+    "start_url": "/115/",
+    "scope": "/115/",
+    "id": "/115/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#121212",
+    "lang": "pt-BR",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/115/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/115/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/115/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/115/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

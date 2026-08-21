@@ -1,49 +1,97 @@
-// // as const btn e status são variáveis constantes
-// const btn = document.getElementById('btn-gravador');
-// const status = document.getElementById('status-gravacao');
+const botaoGravador = document.getElementById("btn-gravador");
+const statusGravacao = document.getElementById("status-gravacao");
+const playerAudio = document.getElementById("player-audio");
 
-// // quando o botão for clicado, ele muda a cor e o texto
-// btn.addEventListener('mousedown', () => {
-// // muda a cor do botão para vermelho e o texto para "Gravando..."
-//     btn.style.backgroundColor = '#e74c3c';
-// // muda o texto do botão para "Gravando... Não solte!" e o status para "Capturando áudio..."
-//     btn.innerText = '🔴 Gravando... Não solte!';
-// // muda o texto do status para "Capturando áudio..."
-//     status.innerText = 'Status: Capturando áudio...';
-// });
+let gravador;
+let partesAudio = [];
+let gravando = false;
 
-// // quando o botão for solto, ele muda a cor e o texto
-// btn.addEventListener('mouseup', () => {
-// // muda a cor do botão para azul e o texto para "Clique e Segure para Gravar"
-//     btn.style.backgroundColor = '#3498db';
-// // muda o texto do botão para "Clique e Segure para Gravar" e o status para "Gravação concluída e enviada!"
-//     btn.innerText = '🎤 Clique e Segure para Gravar';
-// // muda o texto do status para "Gravação concluída e enviada!"
-//     status.innerText = 'Status: Gravação concluída e enviada!';
-// });
+// Começar a gravação
+async function iniciarGravacao() {
+    try {
 
-// Seleção dos elementos HTML
-const btn = document.getElementById('btn-gravador');
-const status = document.getElementById('status-gravacao');
+        // Pede acesso ao microfone
+        const stream = await navigator.mediaDevices.getUserMedia({
+            audio: true
+        });
 
-// Evento: Quando o usuário coloca o dedo no botão
-btn.addEventListener('touchstart', (evento) => {
-    // Impede zooms e seleções de texto indesejadas no celular
-    evento.preventDefault(); 
-    
-    // Altera a cor e os textos para o modo de gravação
-    btn.style.backgroundColor = '#e74c3c';
+        partesAudio = [];
+        // Cria o gravador
+        gravador = new MediaRecorder(stream);
 
+        // Guarda os pedaços do áudio
+        gravador.ondataavailable = function (evento) {
+            if (evento.data.size > 0) {
+                partesAudio.push(evento.data);
+            }
+        };
 
-    
-    btn.innerText = '🔴 Gravando... Não solte!';
-    status.innerText = 'Status: Capturando áudio...';
+        // Quando terminar a gravação
+        gravador.onstop = function () {
+            const audioBlob = new Blob(partesAudio, {
+                type: "audio/webm"
+            });
+
+            const audioURL = URL.createObjectURL(audioBlob);
+            playerAudio.src = audioURL;
+            playerAudio.style.display = "block";
+            statusGravacao.textContent =
+                "Status: Gravação concluída!";
+
+            // Desliga o microfone
+            stream.getTracks().forEach(function (track) {
+                track.stop();
+            });
+        };
+
+        // Começa a gravar
+        gravador.start();
+        gravando = true;
+        botaoGravador.style.backgroundColor = "red";
+        botaoGravador.textContent = "🔴 Gravando...";
+        statusGravacao.textContent = "Status: Gravando áudio...";
+    } catch (erro) {
+        console.error(erro);
+        statusGravacao.textContent =
+            "Status: Não foi possível acessar o microfone.";
+    }
+}
+
+// Parar a gravação
+function pararGravacao() {
+    if (gravador && gravando) {
+        gravador.stop();
+        gravando = false;
+        botaoGravador.style.backgroundColor = "";
+        botaoGravador.textContent =
+            "🎤 Clique e Segure para Gravar";
+    }
+}
+
+// ===============================
+// COMPUTADOR
+// ===============================
+botaoGravador.addEventListener("mousedown", function () {
+    iniciarGravacao();
+});
+botaoGravador.addEventListener("mouseup", function () {
+    pararGravacao();
 });
 
-// Evento: Quando o usuário remove o dedo do botão
-btn.addEventListener('touchend', () => {
-    // Restaura o botão e atualiza o status de envio
-    btn.style.backgroundColor = '#3498db';
-    btn.innerText = '🎤 Clique e Segure para Gravar';
-    status.innerText = 'Status: Gravação concluída e enviada!';
+// Caso o mouse saia do botão
+botaoGravador.addEventListener("mouseleave", function () {
+    pararGravacao();
+});
+
+// ===============================
+// CELULAR
+// ===============================
+botaoGravador.addEventListener("touchstart", function (evento) {
+    evento.preventDefault();
+    iniciarGravacao();
+});
+
+botaoGravador.addEventListener("touchend", function (evento) {
+    evento.preventDefault();
+    pararGravacao();
 });
