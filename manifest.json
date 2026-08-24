@@ -1,0 +1,39 @@
+{
+    "name": "Pão com Ovo",
+    "short_name": "P.C.O",
+    "description": "Pão e ovo",
+    "start_url": "/Po-com-ovo2/",
+    "scope": "/Po-com-ovo2/",
+    "id": "/Po-com-ovo2/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#121212",
+    "lang": "pt-BR",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/Po-com-ovo2/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/Po-com-ovo2/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/Po-com-ovo2/img/js.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/Po-com-ovo2/img/js.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

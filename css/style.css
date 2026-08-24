@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3EEE4;
+    font-family: Georgia, serif;
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    gap: 30px;
+}
+
+.logo_pagina_inicial {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    border-bottom: 2px solid black;
+}
+
+nav a.atual {
+    border-bottom: 2px solid black;
+}
+
+/* =========================
+   BOTÃO TODAS AS RECEITAS
+========================= */
+
+.btn-menu {
+    display: inline-block;
+    background: #A6582D;
+    color: white;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 20px auto;
+    width: 90%;
+    padding: 50px;
+    background: #F3EEE4;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+    width: 45%;
+}
+
+.texto h1 {
+    font-size: 60px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BOTÃO EXPLORAR
+========================= */
+
+.btn-explorar {
+    display: inline-block;
+    background: #A6582D;
+    color: white;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.btn-explorar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-explorar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   IMAGEM DO HERO
+========================= */
+
+.imagem {
+    width: 50%;
+}
+
+.imagem img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.2);
+}
+
+.item img {
+    width: 45px;
+    height: auto;
+}
+
+.item span {
+    font-size: 18px;
+}
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    text-align: center;
+    padding: 40px;
+}
+
+.sobre h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* =========================
+   DEPOIMENTO
+========================= */
+
+.depoimento {
+    width: 80%;
+    margin: 30px auto;
+    background: #E6DFD2;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.depoimento img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.depoimento h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.estrelas {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.depoimento p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    width: 80%;
+    margin: 30px auto;
+    background: #5A1017;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CRÉDITOS
+========================= */
+
+.Creditos {
+    border: none;
+    height: 20px;
+    background-color: #e2ddd2;
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    nav {
+        gap: 18px;
+        font-size: 20px;
+    }
+
+    .btn-menu {
+        font-size: 18px;
+        padding: 16px 20px;
+    }
+
+    .hero {
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .texto h1 {
+        font-size: 45px;
+    }
+
+    .texto p {
+        font-size: 22px;
+    }
+
+    .beneficios {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* =====================================================
+   TABLET PEQUENO
+===================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo_pagina_inicial {
+        width: 150px;
+    }
+
+    .btn-menu {
+        font-size: 18px;
+        padding: 15px 22px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    nav::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    nav::-webkit-scrollbar-thumb {
+        background: #aaa;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .texto h1 {
+        font-size: 40px;
+    }
+
+    .texto p {
+        font-size: 20px;
+    }
+
+    .imagem {
+        width: 100%;
+    }
+
+    .imagem img {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .beneficios {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .item {
+        min-width: 200px;
+    }
+
+    .depoimento {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px 0;
+    }
+
+    .logo_pagina_inicial {
+        width: 110px;
+        justify-self: start;
+    }
+
+    /* BOTÃO */
+
+    .btn-menu {
+        font-size: 15px;
+        padding: 11px 17px;
+        border-radius: 40px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
+        justify-self: end;
+    }
+
+    /* MENU */
+
+    nav {
+        grid-area: menu;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 8px 5px 12px;
+        font-size: 16px;
+        scrollbar-width: thin;
+    }
+
+    nav a {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding-bottom: 4px;
+    }
+
+    /* HERO */
+
+    .hero {
+        width: calc(100% - 32px);
+        margin: 15px 16px;
+        padding: 28px 20px;
+        border-radius: 18px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        gap: 20px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .texto h1 {
+        font-size: 30px;
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .texto p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    /* BOTÃO EXPLORAR */
+
+    .btn-explorar {
+        font-size: 15px;
+        padding: 13px 22px;
+        border-radius: 14px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    /* IMAGEM */
+
+    .imagem {
+        width: 100%;
+    }
+
+    .imagem img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    /* BENEFÍCIOS */
+
+    .beneficios {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    .item {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+        padding: 16px 10px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+        min-width: 0;
+    }
+
+    .item img {
+        width: 32px;
+    }
+
+    .item span {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 30px 20px;
+    }
+
+    .sobre h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .sobre p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* DEPOIMENTO */
+
+    .depoimento {
+        width: 88%;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 16px;
+    }
+
+    .depoimento img {
+        width: 100px;
+    }
+
+    .depoimento h3 {
+        font-size: 18px;
+    }
+
+    .estrelas {
+        font-size: 18px;
+    }
+
+    .depoimento p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        width: 88%;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    footer h2 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    footer p {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    /* CRÉDITOS */
+
+    .Creditos {
+        height: auto;
+        padding: 10px;
+        font-size: 12px;
+        margin-top: 30px;
+    }
+}

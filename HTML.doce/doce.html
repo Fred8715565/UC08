@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Doces</title>
+    <link rel="stylesheet" href="../css/sal.css">
+</head>
+
+<body>
+
+<header>
+
+    <img src="../imgs/logo.png" class="logo" alt="Pão com Ovo">
+
+    <nav>
+        <a href="../index.html">Início</a>
+
+        <a href="../HTML.sal/sal.html">
+            Receitas Salgadas
+        </a>
+
+        <a href="doce.html" class="atual">
+            Receitas Doces
+        </a>
+
+        <a href="../HTML.café/café.html">
+            Receitas de Café
+        </a>
+
+        <a href="../HTML.contato/Cantato.html">
+            Contato
+        </a>
+
+        <a href="../HTML.Sugestão/sugestão.html">
+            Sugestão de Cafés
+        </a>
+    </nav>
+
+    <button class="btn-receitas">
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">
+            Todas as Receitas
+        </a>
+    </button>
+
+</header>
+
+
+<main class="conteudo">
+
+    <section class="texto">
+
+        <main class="conteudo">
+
+    <section class="imagem_sal">
+        <img src="../imgs/doce1.png" alt="Receitas Doces">
+    </section>
+
+    <section class="texto">
+
+        <h1>Receitas Doces</h1>
+
+        <ul>
+            <li><a href="Rabanada simples.html">Rabanada simples</a></li>
+            <li><a href="Pudim de Pão.html">Pudim de pão</a></li>
+            <li><a href="Pão Dece na Frigideira.html">Pão doce na frigideira</a></li>
+            <li><a href="Torrada Francesa Doce.html">Torrada francesa doce</a></li>
+            <li><a href="Affogato.html">Affogato</a></li>
+            <li><a href="Bolo de pão com Banana e Chocolate.html">
+                Bolo de Pão com Banana e Chocolate
+            </a></li>
+        </ul>
+
+        <div class="legenda">
+            "Especial"
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    const links = document.querySelectorAll('nav a');
+    const paginaAtual = document.querySelector('nav a.atual');
+
+    links.forEach(function(link) {
+
+        link.addEventListener('mouseenter', function() {
+
+            if (paginaAtual) {
+                paginaAtual.style.borderBottom = '2px solid transparent';
+            }
+
+        });
+
+        link.addEventListener('mouseleave', function() {
+
+            if (paginaAtual) {
+                paginaAtual.style.borderBottom = '2px solid black';
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

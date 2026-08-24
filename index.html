@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/Po-com-ovo2/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pão com Ovo</title>
+    <link rel="stylesheet" href="./css/style.css">  
+</head>
+<body>
+
+    
+<header>
+    
+    <img src="./imgs/logo.png" alt="Logo" class="logo_pagina_inicial">
+
+        <button class="btn-menu">
+        <a href="./HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+    </button>
+</header>
+
+    <nav>
+        <a href="#" class="ativo atual">Início</a>
+        <a href="./HTML.sal/sal.html"class="ativo">Receitas Salgadas</a>
+        <a href="./HTML.doce/doce.html"class="ativo">Receitas Doces</a>
+        <a href="./HTML.café/café.html"class="ativo">Receitas de Café</a>
+        <a href="./HTML.contato/Cantato.html"class="ativo">Contato</a>
+        <a href="./HTML.Sugestão/sugestão.html"class="ativo">Sugestão de Cafés</a>
+    </nav>
+
+<section class="hero">
+
+    <div class="texto">
+        <h1>Sabor simples,<br>momentos incríveis.</h1>
+
+        <p>
+            Receitas feitas com amor, pão e ovo
+            para transformar seu dia.
+        </p>
+
+        <button class="btn-explorar">
+            <a href="./HTML.Todas as receitas/Todas as receitas.html">Explorar todas as receitas</a>
+        </button>
+    </div>
+
+    <div class="imagem">
+        <img src="./imgs/foto.webp" alt="Pão com ovo">
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <div class="item">
+        <img style box src="./imgs/chef.png">
+        <span>Receitas Testadas</span>
+    </div>
+
+    <div class="item">
+        <img src="./imgs/time.png">
+        <span>Fáceis e Rápidas</span>
+    </div>
+
+    <div class="item">
+        <img src="./imgs/coração.png">
+        <span>Feitas para Todos</span>
+    </div>
+
+    <div class="item">
+        <img src="./imgs/foia.png">
+        <span>Com Amor e Sabor Caseiro</span>
+    </div>
+
+</section>
+
+<section class="sobre">
+
+    <h2>Como é o Pão com Ovo</h2>
+    
+
+    <p>
+        Aqui você encontra práticas, deliciosas e variadas <p>
+        </p>receitas feitas com ingredientes simplesque todo mundo tem em casa: Pão e Ovo!
+    </p>
+
+</section>
+
+<section class="depoimento">
+
+    <div>
+        <img class = "jacquin"src="imgs/ja.png" alt="Jacquin">
+    </div>
+
+
+    <div>
+        <h3>Recomendado por Érick Jacquin</h3>
+        
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            
+        <p classe="descrição">
+            "Pão com Ovo é aquele tipo de site que me conquista logo de cara. As receitas são criativas, bem explicadas e o resultado é sempre delicioso.
+            Parabéns pelo conteúdo de qualidade e por valorizar o que é simples e verdadeiro na cozinha! 
+
+        </p>
+    </div>
+    
+
+</section>
+
+
+
+<footer>
+
+    <h2>Cozinhe Momentos Especiais com Pão com Ovo</h2>
+
+    <p>Avalie nosso site com carinho</p>
+
+</footer>
+
+<sections>
+<div class="Creditos">
+    Creditos: Feito pelo Murillo e adaptado pelo Fred.😎
+</div>
+</sections>   
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+</html>

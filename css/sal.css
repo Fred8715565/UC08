@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F3EEE4;
+    font-family: Georgia, serif;
+    color: #000;
+}
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+    transform: translateY(-3px);
+}
+
+nav a.atual {
+    border-bottom: 2px solid black;
+}
+
+/* BOTÃO */
+
+.btn-receitas {
+    background: #B25B2D;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.btn-receitas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-receitas a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px 60px;
+}
+
+/* IMAGEM */
+
+.imagem_sal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.imagem_sal img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    display: block;
+}
+
+/* TEXTO */
+
+.texto {
+    width: 100%;
+    max-width: 800px;
+}
+
+.texto h1 {
+    display: inline-block;
+    font-size: 50px;
+    background: #E7E0D3;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.texto ul {
+    margin-top: 20px;
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.texto ul li {
+    margin-bottom: 5px;
+}
+
+.texto ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.texto ul li a:hover {
+    color: #B25B2D;
+}
+
+/* LEGENDA */
+
+.legenda {
+    margin-top: 35px;
+    display: inline-block;
+    background: #E7E0D3;
+    padding: 8px 15px;
+    font-size: 20px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    nav {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .btn-receitas {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .conteudo {
+        padding: 30px;
+    }
+
+    .imagem_sal img {
+        max-width: 650px;
+    }
+
+    .texto h1 {
+        font-size: 42px;
+    }
+
+    .texto ul {
+        font-size: 24px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo botao"
+            "menu menu";
+        align-items: center;
+        gap: 10px;
+        padding: 12px 15px 5px;
+    }
+
+    .logo {
+        grid-area: logo;
+        width: 120px;
+        justify-self: start;
+    }
+
+    .btn-receitas {
+        grid-area: botao;
+        justify-self: end;
+        font-size: 16px;
+        padding: 10px 14px;
+        white-space: nowrap;
+    }
+
+    nav {
+        grid-area: menu;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 8px 5px 12px;
+        font-size: 16px;
+        scrollbar-width: thin;
+    }
+
+    nav a {
+        flex-shrink: 0;
+    }
+
+    .conteudo {
+        padding: 25px 20px 40px;
+    }
+
+    .imagem_sal {
+        margin-bottom: 30px;
+    }
+
+    .imagem_sal img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 15px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .texto h1 {
+        font-size: 32px;
+        padding: 8px 15px;
+        margin-bottom: 15px;
+    }
+
+    .texto ul {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 20px;
+        padding-left: 30px;
+    }
+
+    .texto ul li {
+        margin-bottom: 3px;
+    }
+
+    .legenda {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+}
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 400px) {
+    .conteudo {
+        padding: 20px 15px 30px;
+    }
+
+    .texto h1 {
+        font-size: 29px;
+    }
+
+    .texto ul {
+        font-size: 18px;
+    }
+
+    .imagem_sal img {
+        border-radius: 12px;
+    }
+
+    .btn-receitas {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #F3EEE4;
+    font-family: Georgia, serif;
+    color: #000;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 30px;
+}
+
+.logo {
+    width: 170px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex: 1;
+    font-size: 18px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+    transform: translateY(-3px);
+}
+
+nav a.atual {
+    border-bottom: 2px solid black;
+}
+
+.btn-receitas {
+    background: #B25B2D;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.btn-receitas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-receitas a {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+.btn-receitas {
+    background: #B25B2D;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.btn-receitas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-receitas a {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    padding: 40px 60px 70px;
+}
+.texto {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+.texto h1 {
+    display: inline-block;
+    font-size: 50px;
+    background: #E7E0D3;
+    padding: 10px 20px;
+    margin: 0 0 35px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   IMAGEM
+========================= */
+.imagem_config {
+    width: 100%;
+    margin: 0 0 30px 0;
+    float: none;
+}
+
+.imagem_config img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+.texto h2 {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.texto ul,
+.texto ol {
+    font-size: 22px;
+    line-height: 1.5;
+    padding-left: 30px;
+}
+.texto li {
+    margin-bottom: 5px;
+}
+
+/* =========================
+   LEGENDA
+========================= */
+.legenda {
+    clear: both;
+    display: inline-block;
+    margin-top: 40px;
+    background: #E7E0D3;
+    padding: 8px 15px;
+    font-size: 18px;
+}
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+    }
+    nav {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .logo {
+        width: 150px;
+    }
+    .btn-receitas {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .conteudo {
+        padding: 30px;
+    }
+    .imagem_config {
+        width: 50%;
+    }
+    .texto h1 {
+        font-size: 42px;
+    }
+    .texto ul,
+    .texto ol {
+        font-size: 20px;
+    }
+}
+
+/* =========================
+   CELULAR
+========================= */
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo botao"
+            "menu menu";
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px 5px;
+    }
+
+    /* LOGO NO CANTO ESQUERDO */
+    .logo {
+        grid-area: logo;
+        width: 120px;
+        justify-self: start;
+    }
+
+    /* BOTÃO NO CANTO DIREITO */
+    .btn-receitas {
+        grid-area: botao;
+        justify-self: end;
+        font-size: 16px;
+        padding: 10px 14px;
+        border-radius: 18px;
+    }
+
+    /* MENU ABAIXO */
+    nav {
+    grid-area: menu;
+
+    display: flex;
+    width: 100%;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    padding: 8px 5px 12px;
+
+    font-size: 16px;
+
+    scrollbar-width: thin;
+}
+
+nav a {
+    flex-shrink: 0;
+}
+    nav a {
+        flex-shrink: 0;
+    }
+}
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+@media (max-width: 400px) {
+    .texto h1 {
+        font-size: 29px;
+    }
+    .texto h2 {
+        font-size: 20px;
+    }
+    .texto ul,
+    .texto ol {
+        font-size: 18px;
+    }
+    .imagem_config img {
+        border-radius: 10px;
+    }
+}

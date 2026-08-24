@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ovo no pão</title>
+    <link rel="stylesheet" href="../css/todos.css">
+</head>
+<body>
+
+<header>
+    
+    <img src="../imgs/logo.png" class="logo">
+
+    <nav>
+        <a href="../index.html"class="ativa">Inicio</a>
+        <a href="../HTML.sal/sal.html" class="ativa">Receitas Salgadas</a>
+        <a href="../HTML.doce/doce.html"class="ativa">Receitas Doce</a>
+        <a href="café.html"class="ativa atual">Receitas de Café</a>
+        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
+        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+    </nav>
+
+    <button class="btn-receitas">
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+    </button>
+</header>
+
+<main class="conteudo">
+
+    <section class="texto">
+
+        <h1>Cappucino Caseiro</h1>
+
+        <h2>Ingredientes</h2>
+    <ul>
+        <li>1 xícara de leite quente</li>
+        <li>1 colher de café solúvel</li>
+        <li>1 colher de chocolate em pó</li>
+        <li>Açúcar</li>
+        <li>Canela</li>
+    </ul>
+
+    <h2>Como fazer</h2>
+
+    <ol>
+        <li>Misture o café no leite quente.</li>
+        <li>Adicione chocolate e açúcar.</li>
+        <li>Mexa até dissolver.</li>
+        <li>Finalize com canela.</li>
+    </ol>
+
+        <div class="legenda">
+            "Bebida cremosa e aconchegante."
+        </div>
+
+    </section>
+
+        <div class="imagem_config">
+        <img src="../imgs/Cappucino Caseiro.png" alt="Pão com ovo"    style="width:  800px; border-radius:20px;" 
+>
+        </div>
+
+</main>
+
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+</html>
