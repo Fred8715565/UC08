@@ -1,311 +1,573 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#f4efe2;
-    font-family:Georgia, serif;
-    color:#111;
+body {
+    background: #f4efe2;
+    font-family: Georgia, serif;
+    color: #111;
+    overflow-x: hidden;
 }
 
-/* HEADER */
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 30px;
 }
 
-.logo{
-    font-size:60px;
+.logo img {
+    width: 200px;
+    display: block;
 }
 
-nav{
-    display:flex;
-    gap:30px;
-    font-size:25px;}
-    .ativo {
-    text-decoration: none;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 25px;
 }
-
-/* isso mostra uma linha em baixo de algo que ao passar o mouse em cima */
-
-.ativo:hover {
-    transform: translateY(-5px);
-}
-
-.ativoo{
-    text-decoration:underline;
-}
-
 
 nav a {
     text-decoration: none;
     color: black;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
 nav a:hover {
-    border-bottom: 2px solid black;
-}
-
-nav a.atual {
-    border-bottom: 2px solid black;
-}
-
-nav a.atual:hover {
+    transform: translateY(-3px);
     border-bottom: 2px solid black;
 }
 
 
-.btn-receitas{
-    background:#B25B2D;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:20px;
-    cursor:pointer;
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.5);
-    font-size:25px;
-}
+/* =========================
+   BOTÃO
+========================= */
+
 .btn-receitas {
-    text-decoration: none;
+    background: #B25B2D;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
     transition: 0.3s;
+    white-space: nowrap;
 }
-
-/* isso mostra uma linha em baixo de algo que ao passar o mouse em cima */
 
 .btn-receitas:hover {
     transform: translateY(-5px);
+    background: #9c5129;
 }
 
-.btn-receitas a{
-    color:white;
-    text-decoration:none;
-}
-
-/* TITULO */
-
-.titulo{
-    text-align:center;
-    margin:40px 0;
-}
-
-.titulo h1{
-    font-size:70px;
-    line-height:1;
-}
-
-.titulo h2{
-    font-size:50px;
-}
-
-/* CONTEUDO */
-
-.container{
-    width:95%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    align-items:center;
-}
-
-/* FORM */
-
-.formulario{
-    display:flex;
-    flex-direction:column;
-}
-
-.formulario label{
-    display: block;          /* <- isso resolve o problema */
-    font-size:28px;
-    font-weight:bold;
-    margin-top:15px;
-}
-
-.formulario input{
-    display: block;          /* <- garante que fica em coluna */
-    width: 100%;             /* <- ocupa a largura toda */
-    height:55px;
-    border-radius:15px;
-    border:1px solid #555;
-    padding:10px;
-    font-size:18px;
-    margin-top:8px;
-    background: #ffffff;     /* <- combina com o fundo do site */
-}
-
-.formulario textarea{
-    display: block;          /* <- garante que fica em coluna */
-    width: 100%;             /* <- ocupa a largura toda */
-    margin-top:8px;
-    border-radius:15px;
-    border:1px solid #555;
-    padding:15px;
-    font-size:18px;
-    resize:none;
-    background: #ffffff;     /* <- combina com o fundo do site */
-}
-
-.btn-enviar{
-    margin-top:15px;
-    height:60px;
-    width: 100%;
-    border-radius:18px;
-    border:1px solid #444;
-    background:white;
-    font-size:22px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-.btn-enviar {
+.btn-receitas a {
+    color: white;
     text-decoration: none;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    text-align: center;
+    margin: 50px 0 40px;
+}
+
+.titulo h1 {
+    font-size: 70px;
+    line-height: 1.1;
+}
+
+.titulo h2 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   LINHA
+========================= */
+
+.linha {
+    width: 100%;
+    height: 20px;
+    background-color: #e2ddd2;
+    box-shadow: 0 -3px 10px #5a5957;
+}
+
+.linha-baixo {
+    margin-top: 40px;
+    box-shadow: 0 3px 10px #5a5957;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.container {
+    width: 95%;
+    max-width: 1500px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    width: 100%;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.formulario input {
+    display: block;
+    width: 100%;
+    height: 55px;
+    border-radius: 15px;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    background: #fff;
+    outline: none;
+}
+
+.formulario textarea {
+    display: block;
+    width: 100%;
+    min-height: 140px;
+    margin-top: 0;
+    border-radius: 15px;
+    border: 1px solid #555;
+    padding: 15px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    resize: none;
+    background: #fff;
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 2px solid #B25B2D;
+}
+
+
+/* =========================
+   BOTÃO ENVIAR
+========================= */
+
+.btn-enviar {
+    margin-top: 15px;
+    height: 60px;
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid #444;
+    background: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-/* isso mostra uma linha em baixo de algo que ao passar o mouse em cima */
-
 .btn-enviar:hover {
     transform: translateY(-5px);
-}
-
-.btn-enviar:hover{
-    background:#9c5129;
-    color:white;
-}
-
-/* LADO DIREITO */
-
-.lado-direito{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:40px;
-    border-left:2px solid #999;
-    padding-left:40px;
+    background: #9c5129;
+    color: white;
 }
 
 
-.marca{
-    font-size:150px;
-    color:#b96b20;
+/* =========================
+   LADO DIREITO / CHEF
+========================= */
+
+.lado-direito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #999;
+    padding-left: 40px;
+    min-height: 430px;
 }
 
-/* FOOTER */
-
-footer{
-    margin-top:40px;
-    text-align:center;
+.chef {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
 }
 
-footer img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 0;
+    text-align: center;
 }
 
-footer h2{
-    margin-top:15px;
-    font-size:45px;
+footer img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
-/* RESPONSIVO */
+footer h2 {
+    margin-top: 15px;
+    font-size: 45px;
+}
 
-@media(max-width:900px){
 
-    nav{
-        display:none;
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .container{
-        grid-template-columns:1fr;
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 20px;
+        gap: 20px;
     }
 
-    .lado-direito{
-        border-left:none;
-        padding-left:0;
-        flex-direction:column;
+    .titulo h1 {
+        font-size: 55px;
     }
 
-    .titulo h1{
-        font-size:45px;
+    .titulo h2 {
+        font-size: 38px;
     }
 
-    .titulo h2{
-        font-size:30px;
+    .container {
+        width: 90%;
     }
 }
-/* RESPONSIVO - CELULAR (até 600px) */
 
-@media(max-width:600px){
 
-    header{
-        flex-direction:column;
-        gap:15px;
-        padding:15px 20px;
-        text-align:center;
+/* =====================================================
+   CELULAR
+   Composição parecida com sua imagem de referência
+===================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
     }
 
-    .logo{
-        font-size:38px;
+
+    /* =========================
+       HEADER MOBILE
+    ========================= */
+
+    header {
+        display: grid;
+
+        /* Logo | Botão */
+        grid-template-columns: 1fr auto;
+
+        align-items: center;
+
+        padding: 10px 22px 0;
+
+        gap: 10px;
     }
 
-    .btn-receitas{
-        font-size:18px;
-        padding:10px 16px;
+    .logo {
+        display: flex;
+        align-items: center;
     }
 
-    .titulo h1{
-        font-size:32px;
+    .logo img {
+        width: 150px !important;
+        height: auto;
     }
 
-    .titulo h2{
-        font-size:22px;
+    .btn-receitas {
+        font-size: 16px;
+        padding: 10px 14px;
+        border-radius: 20px;
     }
 
-    .container{
-        width:90%;
-        gap:20px;
+
+    /* =========================
+       MENU MOBILE
+    ========================= */
+
+    nav {
+        grid-column: 1 / -1;
+
+        display: flex;
+
+        width: calc(100vw - 30px);
+
+        margin-top: 5px;
+
+        justify-content: flex-start;
+
+        gap: 24px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        flex-wrap: nowrap;
+
+        padding: 8px 5px 14px;
+
+        font-size: 17px;
+
+        /* Esconde a barra de rolagem */
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
     }
 
-    .formulario label{
-        font-size:18px;
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
-    .formulario input,
-    .formulario textarea{
-        font-size:16px;
-        height:45px;
+    nav a {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding-bottom: 5px;
     }
 
-    .formulario textarea{
-        height:auto;
+
+    /* =========================
+       TÍTULO
+    ========================= */
+
+    .titulo {
+        margin: 35px 20px 30px;
+        text-align: center;
     }
 
-    .btn-enviar{
-        font-size:18px;
-        height:50px;
+    .titulo h1 {
+        font-size: 38px;
+        line-height: 1.1;
     }
 
-    .marca{
-        font-size:70px;
+    .titulo h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-top: 8px;
     }
 
-    footer img{
-        height:150px;
+
+    /* =========================
+       LINHA
+    ========================= */
+
+    .linha {
+        height: 15px;
     }
 
-    footer h2{
-        font-size:26px;
-        padding:0 15px;
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .container {
+
+        /* IMPORTANTE:
+           No celular vira uma coluna */
+        display: flex;
+        flex-direction: column;
+
+        width: calc(100% - 40px);
+
+        margin: 30px auto;
+
+        gap: 35px;
+    }
+
+
+    /* =========================
+       FORMULÁRIO
+    ========================= */
+
+    .formulario {
+        width: 100%;
+    }
+
+    .formulario label {
+        font-size: 21px;
+        margin-top: 16px;
+        margin-bottom: 7px;
+    }
+
+    .formulario input {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 13px;
+    }
+
+    .formulario textarea {
+        width: 100%;
+        min-height: 130px;
+        font-size: 16px;
+        border-radius: 13px;
+    }
+
+    .btn-enviar {
+        width: 100%;
+        height: 52px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+
+    /* =========================
+       CHEF
+    ========================= */
+
+    .lado-direito {
+
+        /* tira a divisão vertical */
+        border-left: none;
+
+        /* cria uma divisão horizontal */
+        border-top: 2px solid #999;
+
+        padding-left: 0;
+        padding-top: 25px;
+
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chef {
+        width: 85%;
+        max-width: 330px;
+        height: auto;
+        max-height: none;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    footer h2 {
+        font-size: 27px;
+        padding: 0 15px;
+        margin: 15px 0;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo img {
+        width: 135px !important;
+    }
+
+    .btn-receitas {
+        font-size: 14px;
+        padding: 9px 11px;
+    }
+
+    nav {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .titulo {
+        margin-top: 30px;
+    }
+
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+    .titulo h2 {
+        font-size: 21px;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .formulario label {
+        font-size: 19px;
+    }
+
+    .chef {
+        width: 90%;
+    }
+
+    footer img {
+        height: 130px;
+    }
+
+    footer h2 {
+        font-size: 23px;
     }
 }

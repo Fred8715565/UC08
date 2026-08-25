@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ovo no pão</title>
     <link rel="stylesheet" href="../css/todos.css">
 </head>
+
 <body>
 
 <header>
-    
-    <img src="../imgs/logo.png" class="logo">
+
+    <img src="../imgs/logo.png" class="logo" alt="Affogato">
 
     <nav>
-        <a href="../index.html"class="ativa">Inicio</a>
-        <a href="../HTML.sal/sal.html" class="ativa">Receitas Salgadas</a>
-        <a href="doce.html"class="ativa atual">Receitas Doces</a>
-        <a href="../HTML.café/café.html"class="ativa">Receitas de Café</a>
-        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
-        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+        <a href="../index.html">Início</a>
+
+        <a href="sal.html">Receitas Salgadas</a>
+
+        <a href="../HTML.doce/doce.html"class="ativa atual">Voltar
+        </a>
+
+        <a href="../HTML.café/café.html">
+            Receitas de Café
+        </a>
+
+        <a href="../HTML.contato/Cantato.html">
+            Contato
+        </a>
+
+        <a href="../HTML.Sugestão/sugestão.html">
+            Sugestão de Cafés
+        </a>
     </nav>
 
     <button class="btn-receitas">
-        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">
+            Todas as Receitas
+        </a>
     </button>
+
 </header>
+
 
 <main class="conteudo">
 
@@ -31,7 +50,11 @@
 
         <h1>Affogato</h1>
 
-        <h2>Ingredientes</h2>
+        <div class="imagem_config">
+        <img src="../imgs/affogato.png" alt="Pão com ovo"    style="width:  800px;">
+        </div>
+
+    <h2>Ingredientes</h2>
     <ul>
         <li>1 bola de sorvete de creme</li>
         <li>1 café forte</li>
@@ -51,25 +74,7 @@
 
     </section>
 
-        <div class="imagem_config">
-        <img src="../imgs/affogato.png" alt="Pão com ovo"    style="width:  800px;"
->
-        </div>
-
 </main>
 
-    <script>
-const links = document.querySelectorAll('nav a');
-
-links.forEach(function(link) {
-    link.addEventListener('mouseenter', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
-    });
-
-    link.addEventListener('mouseleave', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
-    });
-});
-</script>
 </body>
 </html>

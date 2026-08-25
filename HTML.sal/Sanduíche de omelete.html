@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ovo no pão</title>
     <link rel="stylesheet" href="../css/todos.css">
 </head>
+
 <body>
 
 <header>
-    
-    <img src="../imgs/logo.png" class="logo">
+
+    <img src="../imgs/logo.png" class="logo" alt="Pão com Ovo">
 
     <nav>
-        <a href="../index.html"class="ativa">Inicio</a>
-        <a href="sal.html"class="ativa atual">Voltar</a>
-        <a href="../HTML.doce/doce.html"class="ativa">Receitas Doces</a>
-        <a href="../HTML.café/café.html"class="ativa">Receitas de Café</a>
-        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
-        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+        <a href="../index.html">Início</a>
+
+        <a href="sal.html" class="atual">Voltar</a>
+
+        <a href="../HTML.doce/doce.html">
+            Receitas Doces
+        </a>
+
+        <a href="../HTML.café/café.html">
+            Receitas de Café
+        </a>
+
+        <a href="../HTML.contato/Cantato.html">
+            Contato
+        </a>
+
+        <a href="../HTML.Sugestão/sugestão.html">
+            Sugestão de Cafés
+        </a>
     </nav>
 
     <button class="btn-receitas">
-        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">
+            Todas as Receitas
+        </a>
     </button>
+
 </header>
+
 
 <main class="conteudo">
 
     <section class="texto">
 
         <h1>Sanduiche de omelete</h1>
+
+        <div class="imagem_config">
+        <img src="../imgs/Sanduiche de omelete.png" alt="Pão com ovo">
+        </div>
+
 
         <h2>Ingredientes</h2>
     <ul>
@@ -57,24 +82,10 @@
 
     </section>
 
-        <div class="imagem_config">
-        <img src="../imgs/Sanduiche de omelete.png" alt="Pão com ovo">
-        </div>
+
+    </section>
 
 </main>
 
-    <script>
-const links = document.querySelectorAll('nav a');
-
-links.forEach(function(link) {
-    link.addEventListener('mouseenter', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
-    });
-
-    link.addEventListener('mouseleave', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
-    });
-});
-</script>
 </body>
 </html>

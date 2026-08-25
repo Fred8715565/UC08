@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ovo no pão</title>
     <link rel="stylesheet" href="../css/todos.css">
 </head>
+
 <body>
 
 <header>
-    
-    <img src="../imgs/logo.png" class="logo">
+
+    <img src="../imgs/logo.png" class="logo" alt="Bolo de pão com banana e chocolate">
 
     <nav>
         <a href="../index.html"class="ativa">Inicio</a>
@@ -24,11 +27,17 @@
     </button>
 </header>
 
+
+
 <main class="conteudo">
 
     <section class="texto">
 
         <h1>Bolo de Pão com Banana e Chocolate</h1>
+
+        <div class="imagem_config">
+        <img src="../imgs/Bolo de pão com banana e chocolate.png" alt="Pão com ovo"    style="width:  800px;">
+        </div>
 
         <h2>Ingredientes</h2>
     <ul>
@@ -59,25 +68,7 @@
 
     </section>
 
-        <div class="imagem_config">
-        <img src="../imgs/Bolo de pão com banana e chocolate.png" alt="Pão com ovo"    style="width:  800px;"
->
-        </div>
-
 </main>
 
-    <script>
-const links = document.querySelectorAll('nav a');
-
-links.forEach(function(link) {
-    link.addEventListener('mouseenter', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
-    });
-
-    link.addEventListener('mouseleave', function() {
-        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
-    });
-});
-</script>
 </body>
 </html>
