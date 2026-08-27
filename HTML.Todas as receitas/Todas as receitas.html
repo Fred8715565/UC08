@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todas as Receitas</title>
+
+<link rel="stylesheet" href="../css/todas.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="../imgs/logo.png"style="width: 200px;">
+    </div>
+
+    <nav>
+        <a href="../index.html"class="ativo">Início</a>
+        <a href="../HTML.sal/sal.html"class="sugestão ativo">Receitas Salgadas</a>
+        <a href="../HTML.doce/doce.html"class="sugestão ativo">Receitas Doces</a>
+        <a href="../HTML.café/café.html"class="sugestão ativo">Receitas de Café</a>
+        <a href="../HTML.contato/Cantato.html"class="sugestão ativo">Contato</a>
+        <a href="../HTML.Sugestão/sugestão.html"class="ativo">Sugestão de Cafés</a>
+    </nav>
+
+    <img
+        class="chef"
+        src="../imgs/jacquin.png" 
+        alt="Chef">
+        
+
+</header>
+
+<seciton>
+        <div>
+        <hr style="border: none; height: 40px; background-color: #e2ddd2; margin-top: -18px; margin-bottom: 0; box-shadow: 0px 0px 10px #5a5957;">
+        </div>
+</seciton>
+
+<section class="hero">
+    <h1>Todas as Receitas</h1>
+</section>
+
+<seciton>
+        <div>
+        <hr style="border: none; height: 40px; background-color: #e2ddd2; margin-top: -10px; margin-bottom: 0; box-shadow: 0px 0px 10px #5a5957;">
+        </div>
+</seciton>
+
+<section class="receitas">
+
+    <div class="coluna">
+
+        <h2>Receitas Doces</h2>
+
+        <p>Receitas perfeitas para:</p>
+
+        <ul>
+            <li>Café da manhã</li>
+            <li>Sobremesas</li>
+            <li>Café da tarde</li>
+            <li>Lanches doces</li>
+        </ul>
+
+        <p class="subtitulo">Exemplos:</p>
+
+        <ul>
+            <li>Rabanada simples</li>
+            <li>Pudim de pão</li>
+            <li>Pão doce na frigideira</li>
+            <li>Torrada francesa doce</li>
+            <li>Affogato</li>
+            <li>Café com chocolate</li>
+        </ul>
+
+        <p class="subtitulo">Características:</p>
+
+        <p>Fáceis de fazer</p>
+        <p>Ingredientes simples</p>
+        <p>Ótimas para adoçar o dia</p>
+
+    </div>
+
+    <div class="coluna">
+
+        <h2>Receitas Salgadas</h2>
+
+        <p>Receitas ideais para:</p>
+
+        <ul>
+            <li>Almoço rápido</li>
+            <li>Jantar</li>
+            <li>Lanche</li>
+            <li>Café da manhã reforçado</li>
+        </ul>
+
+        <p class="subtitulo">Exemplos:</p>
+
+        <ul>
+            <li>Ovo no pão</li>
+            <li>Sanduíche de omelete</li>
+            <li>Pizza de pão de forma</li>
+            <li>Omelete de pão</li>
+            <li>Bruschetta de ovo de codorna</li>
+            <li>Pão recheado com ovo</li>
+        </ul>
+
+        <p class="subtitulo">Características:</p>
+
+        <p>Rápidas</p>
+        <p>Saborosas</p>
+        <p>Econômicas</p>
+
+    </div>
+
+
+    <div class="coluna">
+
+        <h2>Receitas de Café</h2>
+
+        <p>Bebidas e cafés especiais para acompanhar as receitas.</p>
+
+        <p class="subtitulo">Exemplos:</p>
+
+        <ul>
+            <li>Cappuccino caseiro</li>
+            <li>Café cremoso</li>
+            <li>Café gelado</li>
+            <li>Café com leite condensado</li>
+            <li>Frappé de café</li>
+            <li>Dalgona Coffee</li>
+        </ul>
+
+        <p class="subtitulo">Características:</p>
+
+        <p>Cremosos</p>
+        <p>Quentes ou gelados</p>
+
+
+        
+
+    </div>
+
+</section>
+
+
+<seciton>
+        <div>
+        <hr style="border: none; height: 40px; background-color: #e2ddd2; margin-top: -0px; margin-bottom: 0; box-shadow: 0px 0px 10px #5a5957;">
+        </div>
+</seciton>
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+</html>

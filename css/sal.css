@@ -1,0 +1,139 @@
+body{
+    margin:0;
+    background:#F3EEE4;
+    font-family:Georgia, serif;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+
+.logo{
+    width:200px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+    font-size:25px;
+}
+    .sal {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* isso mostra uma linha em baixo de algo que ao passar o mouse em cima */
+
+.sal:hover {
+    box-shadow: #000000;
+    transform: translateY(-5px);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+nav a.atual {
+    border-bottom: 2px solid black;
+}
+
+nav a.atual:hover {
+    border-bottom: 2px solid black;
+}
+
+.sal {
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sal:hover {
+    box-shadow: #000000;
+    transform: translateY(-5px);
+}
+
+
+.btn-receitas{
+    background:#B25B2D;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+    .btn-receitas {
+    transition: 0.3s;
+}
+.btn-receitas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-receitas a{
+    color:white;
+    text-decoration:none;
+}
+
+.conteudo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px;
+}
+
+.texto{
+    width:50%;
+}
+
+.texto h1{
+    display:inline-block;
+    font-size:60px;
+    background:#e7e0d3;
+    padding:10px 20px;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+
+
+
+.texto ul{
+    margin-top:40px;
+    font-size:30px;
+    line-height:1.6;
+}
+
+.imagem img{
+    width:500px;
+    border-radius:8px;
+}
+
+.legenda{
+    margin-top:80px;
+    display:inline-block;
+    background:#e7e0d3;
+    padding:8px 15px;
+    font-size:20px;
+}
+.texto ul li a{
+    color:#000000;
+    text-decoration:none;
+    transition:color .3s;
+}
+
+.imagem_sal img{
+    width:800px;
+    border-radius:20px;
+    right: 50px;;
+    
+}

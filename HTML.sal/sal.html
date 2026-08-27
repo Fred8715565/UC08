@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Receitas Salgadas</title>
+    <link rel="stylesheet" href="../css/sal.css">
+</head>
+<body>
+
+<header>
+    <img src="../imgs/logo.png" class="logo">
+    <nav>
+        <a href="../index.html"class="ativa">Inicio</a>
+        <a href="sal.html"class="ativa atual">Receitas Salgadas</a>
+        <a href="../HTML.doce/doce.html"class="ativa">Receitas Doces</a>
+        <a href="../HTML.café/café.html"class="ativa">Receitas de Café</a>
+        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
+        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+    </nav>
+
+    <button class="btn-receitas">
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+    </button>
+</header>
+
+<main class="conteudo">
+
+    <section class="texto">
+
+        <h1>Receitas Salgadas</h1>
+
+        <ul>
+            <li><a href="Ovo_no_pão.html">Ovo no pão</a></li>
+            <li><a href="Sanduíche de omelete.html">Sanduíche de omelete</a></li>
+            <li><a href="Pizza de Pão de Forma.html">Pizza de pão de forma</a></li>
+            <li><a href="Omelete de Pão.html">Omelete de pão</a></li>
+            <li><a href="Bruschetta de Ovo de Codorna.html">Bruschetta de ovo de codorna</a></li>
+            <li><a href="Shakshuka com Pão.html">Shakshuka com Pão</a></li>
+        </ul>
+
+        <div class="legenda">
+            "café da manhã reforçado"
+        </div>
+
+    </section>
+
+    <section class="imagem_sal">
+        <img src="../imgs/inicio_sal.png" alt="">
+    </section>
+    
+</main>
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+</html>

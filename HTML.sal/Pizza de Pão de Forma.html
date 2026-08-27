@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ovo no pão</title>
+    <link rel="stylesheet" href="../css/todos.css">
+    
+</head>
+<body>
+
+<header>
+    
+    <img src="../imgs/logo.png" class="logo">
+
+    <nav>
+        <a href="../index.html"class="ativa">Inicio</a>
+        <a href="sal.html"class="ativa atual">Voltar</a>
+        <a href="../HTML.doce/doce.html"class="ativa">Receitas Doces</a>
+        <a href="../HTML.café/café.html"class="ativa">Receitas de Café</a>
+        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
+        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+    </nav>
+
+    <button class="btn-receitas">
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+    </button>
+</header>
+
+<main class="conteudo">
+
+    <section class="texto">
+
+        <h1>Pizza de Pão de Forma</h1>
+
+        <h2>Ingredientes</h2>
+    <ul>
+        <li>Pão de forma</li>
+        <li>Molho de tomate</li>
+        <li>Queijo</li>
+        <li>Ovo</li>
+        <li>Tomate</li>
+        <li>Orégano</li>
+    </ul>
+
+    <h2>Como fazer</h2>
+
+    <ol>
+        <li>Passe molho no pão.</li>
+        <li>Adicione queijo e tomate.</li>
+        <li>Coloque o ovo.</li>
+        <li>Leve ao forno ou air fryer.Tempo</li>
+        <li>Air fryer: 8 minutos</li>
+        <li>Forno: 12 minutos</li>
+    </ol>
+
+        <div class="legenda">
+            "Muito bom"
+        </div>
+
+    </section>
+
+        <div class="imagem_config">
+        <img src="../imgs/Pizza de Pão de Forma.png" alt="Pão com ovo">
+        </div>
+
+</main>
+
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+</html>

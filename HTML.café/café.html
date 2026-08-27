@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Receitas Salgadas</title>
+    <link rel="stylesheet" href="../css/sal.css">
+</head>
+<body>
+
+<header>
+    <img src="../imgs/logo.png" class="logo">
+    <nav>
+        <a href="../index.html"class="ativa">Inicio</a>
+        <a href="../HTML.sal/sal.html" class="ativa">Receitas Salgadas</a>
+        <a href="../HTML.doce/doce.html"class="ativa">Receitas Doces</a>
+        <a href="café.html"class="ativa atual">Receitas de Café</a>
+        <a href="../HTML.contato/Cantato.html"class="ativa">Contato</a>
+        <a href="../HTML.Sugestão/sugestão.html"class="ativa">Sugestão de Cafés</a>
+    </nav>
+
+    <button class="btn-receitas">
+        <a href="../HTML.Todas as receitas/Todas as receitas.html">Todas as Receitas</a>
+    </button>
+</header>
+
+<main class="conteudo">
+
+    <section class="texto">
+
+        <h1>Receitas de Café</h1>
+
+        <ul>
+            <li><a href="Cappucino caseiro.html">Cappucino caseiro</a></li>
+            <li><a href="Café Cremoso.html">Café Cremoso</a></li>
+            <li><a href="Café gelado.html">Café gelado</a></li>
+            <li><a href="Café com Chocolate.html">Café com Chocolate</a></li>
+            <li><a href="Frappé de café.html">Frappé de café</a></li>
+            <li><a href="Café Dalgona.html">Café Dalgona</a></li>
+        </ul>
+
+        <div class="legenda">
+            "Especial"
+        </div>
+
+    </section>
+
+    <section class="imagem_sal">
+        <img src="../imgs/Receitas de Café.png" alt="">
+    </section>
+    
+</main>
+    <script>
+const links = document.querySelectorAll('nav a');
+
+links.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid transparent';
+    });
+
+    link.addEventListener('mouseleave', function() {
+        document.querySelector('nav a.atual').style.borderBottom = '2px solid black';
+    });
+});
+</script>
+</body>
+
+    
+</html>

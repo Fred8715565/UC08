@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#F3EEE4;
+    font-family:Georgia, serif;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.ativoo{
+    text-decoration:underline;
+}
+
+.logo_pagina_inicial{
+    width:200px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+    font-size:25px;}
+    .ativo {
+    text-decoration: none;
+}
+
+/* isso mostra uma linha em baixo de algo que ao passar o mouse em cima */
+
+.ativo:hover {
+    transform: translateY(-5px);
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+nav a.atual {
+    border-bottom: 2px solid black;
+}
+
+nav a.atual:hover {
+    border-bottom: 2px solid black;
+}
+
+
+
+.btn-menu{
+    background:#A6582D;
+    color:white;
+    border:none;
+    padding:25px 25px;
+    border-radius:60px;
+    cursor:pointer;
+    font-size:25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+    .btn-menu {
+    transition: 0.3s;
+}
+
+.btn-menu a{
+    color:white;
+    text-decoration:none;
+}
+
+.btn-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* muda a posição da imagen */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 80px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius:20px;
+}
+
+.texto{
+    width:45%;
+}
+
+.texto h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.texto p{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.btn-explorar{
+    background:#A6582D;
+    border:none;
+    padding: 20px 25px;
+    border-radius:20px;
+    font-size: 20px;
+    cursor:pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+    .btn-explorar {
+    transition: 0.3s;
+}
+
+.btn-explorar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-explorar a{
+    color:white;
+    text-decoration:none;
+}
+
+
+.imagem img{
+    width: 700px;
+    border-radius:10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.beneficios{
+    display:flex;
+    gap:40px;
+    padding:20px 80px;
+}
+
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius:20px;
+}
+
+.item img{
+    width:45px;
+}
+
+.sobre{
+    text-align:center;
+    padding:40px;
+}
+
+.sobre h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.sobre p{
+    font-size:24px;
+}
+
+.depoimento{
+    width:80%;
+    margin:30px auto;
+    background:#E6DFD2;
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.depoimento img{
+    width:180px;
+    
+}
+
+
+footer{
+    width:80%;
+    margin:30px auto;
+    background:#5A1017;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.item {
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.2);
+}
+
+.Creditos{
+    border: none;
+    height: 20px;
+    background-color:
+    #e2ddd2; margin-top: 40px;
+    margin-bottom: 0;
+}
